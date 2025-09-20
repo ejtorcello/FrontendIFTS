@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title Registro de Checklists
+  body
+    h1 Registro de Checklists
+
+    section
+      h2 Nuevo Checklist
+      form(action="/unidades" method="POST")
+        label(for="id") ID:
+        input(type="text" name="id" required)
+        br
+        label(for="marca") Marca:
+        input(type="text" name="marca" required)
+        br
+        label(for="modelo") Modelo:
+        input(type="text" name="modelo" required)
+        br
+        label(for="estadoMantenimiento") Estado:
+        select(name="estadoMantenimiento")
+          option(value="OK") OK
+          option(value="Requiere servicio") Requiere servicio
+        br
+        button(type="submit") Guardar Checklist
+
+    section
+      h2 Listar Unidades APTAS
+      p Aquí se mostrarán las unidades con estado "OK"
+
+    section
+      h2 Unidades en Baja
+      p Aquí se mostrarán las unidades con estado "Requiere servicio"
